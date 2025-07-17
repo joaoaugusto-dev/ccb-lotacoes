@@ -18,3 +18,11 @@ conn.authenticate().then(async () => {
 }).catch((erro) => {
   console.log(erro);
 });
+
+app.get('/', async (req, res) => {
+  res.render('index');
+});
+
+app.listen(process.env.PORT, () => {
+  console.log(`Servidor rodando na porta ${process.env.PORT}`);
+});
